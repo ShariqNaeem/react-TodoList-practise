@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import './App.css';
 import TodoList from './components/TodoList';
 import TodoInput from './components/TodoInput';
@@ -6,15 +6,15 @@ import uuid from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TodoItem from './components/TodoItem';
 
-function App() {
+export default class App extends Component {
   state={
     items:[{id:1, title:"wake up"},{id:2, title:"make breakfast"}],
     id: uuid(),
-    item: '',
-    editItem: ''
+    item: "",
+    editItem: false
   };
 
-  handleChange=e=>{
+  handleChange= (e) =>{
     console.log("Handle Change.");
   };
 
@@ -35,7 +35,7 @@ function App() {
     console.log("Handle Edit.");
   };
 
-
+ render(){
   return (
     <div className="container">
       <div className="row">
@@ -57,6 +57,6 @@ function App() {
       </div>
     </div>
   );
+ }
 }
 
-export default App;
