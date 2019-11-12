@@ -5,7 +5,7 @@ import TodoInput from './components/TodoInput';
 import uuid from 'uuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import TodoItem from './components/TodoItem';
+//import TodoItem from './components/TodoItem';
 
 export default class App extends Component {
   state={
